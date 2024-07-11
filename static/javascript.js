@@ -119,6 +119,9 @@ function correctWord() {
     stopTimer();
   } else {
     document.querySelector(".timer").style.color = "red";
+    setTimeout(() => {
+      document.querySelector(".timer").style.color = "#fff";
+    }, 1000);
   }
 }
 
