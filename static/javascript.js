@@ -116,6 +116,7 @@ function resetTimer() {
 function correctWord() {
   if (typingInput.value === wordToType) {
     document.querySelector(".timer").style.color = "green";
+    stopTimer();
   } else {
     document.querySelector(".timer").style.color = "red";
   }
@@ -125,7 +126,6 @@ timer.textContent = `${pad(minutes)}:${pad(seconds)}:${pad(milliseconds)}`;
 
 document.addEventListener("keydown", function (e) {
   if (e.key === "Enter") {
-    stopTimer();
     correctWord();
   } else {
     startTimer();
